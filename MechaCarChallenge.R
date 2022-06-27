@@ -13,3 +13,7 @@ lot_summary <- suspension_table %>% group_by(Manufacturing_Lot) %>% summarize(Me
 
 # Deliverable 3
 
+t.test(suspension_table$PSI, mu = 1500)
+t.test(subset(suspension_table, Manufacturing_Lot == "Lot1")$PSI, mu= 1500)
+t.test(subset(suspension_table, Manufacturing_Lot == "Lot2")$PSI, mu= 1500)
+t.test(subset(suspension_table, Manufacturing_Lot == "Lot3")$PSI, mu= 1500)
